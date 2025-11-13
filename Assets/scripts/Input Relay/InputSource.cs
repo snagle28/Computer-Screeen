@@ -33,7 +33,8 @@ public class InputSource : MonoBehaviour
             //Debug.Log($"Hit {hitResult.collider.gameObject.name} at {hitResult.textureCoord}");
             
             OnCursorInput.Invoke(hitResult.textureCoord);
-            //Debug.Log(hitResult.textureCoord);
+            //Debug.Log(hitResult.textureCoord); 
+            //testing new repo
         } 
         
     }
