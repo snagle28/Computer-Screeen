@@ -22,9 +22,8 @@ public class GlitchController : MonoBehaviour
         screenMat.SetFloat("_glitchON", 0f);
     }
 
-    void OnMouseExit()
+    void OnApplicationQuit()
     {
-        
+        StopGlitch();
     }
-    
 }
