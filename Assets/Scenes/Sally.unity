@@ -266,6 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partner: {fileID: 1575489648}
+  currentPage: {fileID: 0}
+  nextPage: {fileID: 0}
   displayImage1: {fileID: 1869027399}
   displayImage2: {fileID: 988445178}
   isController: 1
@@ -1343,8 +1345,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1941575738}
   m_HandleRect: {fileID: 1941575737}
   m_Direction: 2
-  m_Value: -0.011153507
-  m_Size: 0.29198495
+  m_Value: -0.00000022577949
+  m_Size: 0.3059379
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2277,7 +2279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &628870495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3897,9 +3899,9 @@ RectTransform:
   m_Father: {fileID: 124495367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1209769761
 MonoBehaviour:
@@ -5246,6 +5248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partner: {fileID: 17569848}
+  currentPage: {fileID: 0}
+  nextPage: {fileID: 0}
   displayImage1: {fileID: 1869027399}
   displayImage2: {fileID: 988445178}
   isController: 1
@@ -5728,7 +5732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 683.3648}
+  m_AnchoredPosition: {x: 0, y: 675.8271}
   m_SizeDelta: {x: 0, y: 973.727}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1807954314
@@ -6046,7 +6050,7 @@ RectTransform:
   m_Father: {fileID: 1988572934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.3059379}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6310,12 +6314,12 @@ GameObject:
   - component: {fileID: 1978158388}
   - component: {fileID: 1978158387}
   m_Layer: 6
-  m_Name: page2
+  m_Name: hummusPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1978158386
 RectTransform:
   m_ObjectHideFlags: 0
