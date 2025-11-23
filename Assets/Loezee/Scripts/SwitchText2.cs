@@ -11,6 +11,10 @@ public class SwitchText2 : MonoBehaviour
 {
     //assign a partner to each text
     public SwitchText2 partner;
+    
+    //current and next pages
+    public GameObject currentPage;
+    public GameObject nextPage;
 
     [Header("Images for this pair")] 
     public GameObject displayImage1;
@@ -102,5 +106,13 @@ public class SwitchText2 : MonoBehaviour
             img.color = new Color(1f, 1f, 0.6f, 1f);
         else
             img.color = Color.white;
+    }
+
+    public void SetActiveStuff()
+    {
+        
+        currentPage.SetActive(false);
+        nextPage.SetActive(true);
+        
     }
 }
