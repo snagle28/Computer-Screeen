@@ -26,6 +26,9 @@ public class SwitchText2 : MonoBehaviour
     private bool isSelected = false;
 
     public bool puzzleDone = false;
+    
+    
+    
 
     //static = shared by the pair so image only switches once
     private static bool imageSwitched = false;
@@ -55,6 +58,8 @@ public class SwitchText2 : MonoBehaviour
         if (isSelected && partner != null && partner.isSelected)
         {
             SwapPositions();
+            puzzleDone = true;
+            Debug.Log("Puzzle done");
         }
     }
 
@@ -93,8 +98,8 @@ public class SwitchText2 : MonoBehaviour
             {
                 displayImage2.SetActive(false);
             }
-           // imageSwitched = true;
-           puzzleDone = true;
+            imageSwitched = true; // so it cant happen again
+            puzzleDone = true;
         }
     }
 
