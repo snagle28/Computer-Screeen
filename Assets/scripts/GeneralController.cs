@@ -42,6 +42,7 @@ public class GeneralController : MonoBehaviour
 
     public bool DoneAllPuzzles()
     {
+        
         bool pairsDone = true;
         bool tplsDone = true;
         
@@ -54,8 +55,8 @@ public class GeneralController : MonoBehaviour
             }
         }
 
-       if(tplSwapScript != null)
-       {
+        if(tplSwapScript != null)
+        {
            foreach (SwitchText tplSwapScript in tplSwapScripts)
            {
                if (!tplSwapScript.finalSwapDone)
@@ -64,8 +65,10 @@ public class GeneralController : MonoBehaviour
                    break;
                }
            }
-       }
+        }
 
+        print("pairs done: " + pairsDone);
+        print("tpls done: " + tplsDone);
         if (pairsDone && tplsDone)
         {
             return true;

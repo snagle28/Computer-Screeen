@@ -59,6 +59,7 @@ public class SwitchText2 : MonoBehaviour
         {
             SwapPositions();
             puzzleDone = true;
+            partner.puzzleDone = true;
             Debug.Log("Puzzle done");
         }
     }
@@ -99,7 +100,7 @@ public class SwitchText2 : MonoBehaviour
                 displayImage2.SetActive(false);
             }
             imageSwitched = true; // so it cant happen again
-            puzzleDone = true;
+            //puzzleDone = true;
         }
     }
 
