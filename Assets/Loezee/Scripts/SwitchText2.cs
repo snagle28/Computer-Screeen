@@ -31,7 +31,7 @@ public class SwitchText2 : MonoBehaviour
     
 
     //static = shared by the pair so image only switches once
-    private bool imageSwitched = false;
+    private  bool imageSwitched = false;
 
     void Awake()
     {
