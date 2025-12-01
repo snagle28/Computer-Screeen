@@ -3977,7 +3977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.008, y: 746.02435}
+  m_AnchoredPosition: {x: 0.008, y: 746.35693}
   m_SizeDelta: {x: 0, y: 1168.864}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &852640116
@@ -6813,8 +6813,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1249575609}
   m_HandleRect: {fileID: 1249575607}
   m_Direction: 2
-  m_Value: -0.0003144277
-  m_Size: 0.34440517
+  m_Value: -0.000760208
+  m_Size: 0.3388934
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8403,8 +8403,8 @@ MonoBehaviour:
   partner: {fileID: 2062065119}
   currentPage: {fileID: 0}
   nextPage: {fileID: 0}
-  displayImage1: {fileID: 1594404077}
-  displayImage2: {fileID: 1318844302}
+  displayImage1: {fileID: 1318844302}
+  displayImage2: {fileID: 1594404077}
   isController: 1
   puzzleDone: 0
 --- !u!114 &1620916651
@@ -10065,8 +10065,8 @@ MonoBehaviour:
   partner: {fileID: 1620916650}
   currentPage: {fileID: 0}
   nextPage: {fileID: 0}
-  displayImage1: {fileID: 1594404077}
-  displayImage2: {fileID: 1318844302}
+  displayImage1: {fileID: 1318844302}
+  displayImage2: {fileID: 1594404077}
   isController: 1
   puzzleDone: 0
 --- !u!114 &2062065120
