@@ -2500,6 +2500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanvasTransform: {fileID: 429565180}
+  uiCamera: {fileID: 1266297481}
 --- !u!114 &429565182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5461,6 +5462,7 @@ GameObject:
   - component: {fileID: 1208552743}
   - component: {fileID: 1208552745}
   - component: {fileID: 1208552744}
+  - component: {fileID: 1208552746}
   m_Layer: 6
   m_Name: Content
   m_TagString: Untagged
@@ -5526,6 +5528,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208552742}
   m_CullTransparentMesh: 1
+--- !u!114 &1208552746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208552742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e16acbf7915224ba1ec00eeef47f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1209769759
 GameObject:
   m_ObjectHideFlags: 0
@@ -8782,6 +8796,7 @@ GameObject:
   - component: {fileID: 1807954312}
   - component: {fileID: 1807954314}
   - component: {fileID: 1807954315}
+  - component: {fileID: 1807954316}
   m_Layer: 6
   m_Name: Content
   m_TagString: Untagged
@@ -8852,6 +8867,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1807954316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807954311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e16acbf7915224ba1ec00eeef47f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1860189975
 GameObject:
   m_ObjectHideFlags: 0
@@ -9873,6 +9900,7 @@ GameObject:
   - component: {fileID: 2007822650}
   - component: {fileID: 2007822652}
   - component: {fileID: 2007822651}
+  - component: {fileID: 2007822653}
   m_Layer: 6
   m_Name: Content
   m_TagString: Untagged
@@ -9938,6 +9966,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007822649}
   m_CullTransparentMesh: 1
+--- !u!114 &2007822653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007822649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e16acbf7915224ba1ec00eeef47f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023540804
 GameObject:
   m_ObjectHideFlags: 0

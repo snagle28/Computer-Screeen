@@ -30,15 +30,33 @@ public class InputRelaySink : MonoBehaviour
         raycaster = GetComponent<GraphicRaycaster>();
     }
     
+    [SerializeField] private Camera uiCamera;
 
-    public void OnCursorInput(Vector2 normalisedPosition)
+    public void OnCursorInput(Vector2 normalizedPosition)
     {
         //STEP 1: CALCULATE MOUSE POSITION IN CANVAS SPACE//
-        Vector3 mousePosition = new Vector3(CanvasTransform.sizeDelta.x * normalisedPosition.x,
-            CanvasTransform.sizeDelta.y * normalisedPosition.y,
+        Vector3 mousePosition = new Vector3(CanvasTransform.sizeDelta.x * normalizedPosition.x,
+            CanvasTransform.sizeDelta.y * normalizedPosition.y,
             0f);
         
         Vector2 mousePos = new Vector2(mousePosition.x, mousePosition.y);
+        // Convert normalized UV → screen pixel position
+        Vector2 screenPos = new Vector2(
+            normalizedPosition.x * Screen.width,
+            normalizedPosition.y * Screen.height
+        );
+
+        // Convert screen point to local point on the canvas rect
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            CanvasTransform,
+            screenPos,
+            // null,   // camera (null = overlay UI)
+            uiCamera,
+            out localPoint
+        );
+
+        //Vector2 mousePos = localPoint;
         
         //STEP 2: CHECK MOUSE BUTTONS//
 
