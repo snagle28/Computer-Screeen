@@ -3988,6 +3988,7 @@ GameObject:
   - component: {fileID: 852640115}
   - component: {fileID: 852640117}
   - component: {fileID: 852640116}
+  - component: {fileID: 852640118}
   m_Layer: 6
   m_Name: Content (1)
   m_TagString: Untagged
@@ -4055,6 +4056,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852640114}
   m_CullTransparentMesh: 1
+--- !u!114 &852640118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852640114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e16acbf7915224ba1ec00eeef47f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &857788029
 GameObject:
   m_ObjectHideFlags: 0
@@ -7192,6 +7205,21 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: InputRelaySink, Assembly-CSharp
         m_MethodName: OnCursorInput
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCursorExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 429565181}
+        m_TargetAssemblyTypeName: InputRelaySink, Assembly-CSharp
+        m_MethodName: OnCursorExit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
