@@ -185,8 +185,41 @@ public class InputRelaySink : MonoBehaviour
         }
         else
         {
+            lastMousePos = mousePos;  // Store current position, not zero!
+        }
+    }
+    public void OnCursorExit()
+    {
+        // Cancel any active drag when cursor leaves the canvas
+        if (activeDT != null && Input.GetMouseButton(0))
+        {
+            if (perPointer != null)
+            {
+                ExecuteEvents.Execute(activeDT, perPointer, ExecuteEvents.endDragHandler);
+                
+                if (perPointer.pointerPress != null)
+                {
+                    ExecuteEvents.Execute(perPointer.pointerPress, perPointer, ExecuteEvents.pointerUpHandler);
+                }
+            }
+            
+            foreach (var t in DragTargets)
+            {
+                if (t != activeDT && perPointer != null)
+                {
+                    ExecuteEvents.Execute(t, perPointer, ExecuteEvents.endDragHandler);
+                }
+            }
+            
+            DragTargets.Clear();
+            activeDT = null;
+            perPointer = null;
             lastMousePos = Vector2.zero;
         }
     }
+
+    
+    
+    
 }
 
