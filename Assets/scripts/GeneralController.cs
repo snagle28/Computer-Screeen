@@ -1,11 +1,13 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GeneralController : MonoBehaviour
 {
-
+    
+    
     public SwitchText2 pairSwapScript;
     public SwitchText tplSwapScript;
     
@@ -37,6 +39,7 @@ public class GeneralController : MonoBehaviour
             buttonConcealer.SetActive(false);
 
         }
+        
     }
 
 
@@ -79,4 +82,6 @@ public class GeneralController : MonoBehaviour
         }
         
     }
+    
+    
 }
