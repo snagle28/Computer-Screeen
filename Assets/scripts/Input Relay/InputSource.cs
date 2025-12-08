@@ -11,53 +11,144 @@ public class InputSource : MonoBehaviour
     [SerializeField] UnityEvent<Vector2> OnCursorInput = new UnityEvent<Vector2>();
     [SerializeField] UnityEvent OnCursorExit = new UnityEvent();
     
-    private bool wasHittingLastFrame = false;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private bool wasHittingLastFrame = false;
+
+    // last canvas coordinates b4 leaving canvas
+    private Vector2 lastCanvasCoor;
+    
+    private bool isDragging = false;
+
+    // tracking mouse movement
+    private Vector2 lastMousePos;
+    private bool hasLastMousePos = false;
+
+    // how much UV moves per pixel of mouse movement 
+    private Vector2 uvPerPixel = Vector2.zero;
+    private bool hasCalibration = false; //true when we compute uvPerPixel. NEED THIS 
+    //b4 we simulate moevemnt
+
     void Start()
     {
-        
+        // initialize lastMousePos so first delta isn’t huge
+        lastMousePos = Input.mousePosition;
+        hasLastMousePos = true;
     }
 
     // Update is called once per frame
-    void Update()
+    private Vector2 mouseDelta;
+     void Update()
     {
-        //Debug.Log(Input.mousePosition);
-        //retrieve a ray based on mouse position
-        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        //raycast to find what we need to hit
-        RaycastHit hitResult;
-        if (Physics.Raycast(mouseRay, out hitResult, RaycastDistance, RaycastMask, QueryTriggerInteraction.Ignore))
+        /*
+         * ADDED THESE VARS to FIX THE FACT THAT U CANT DRAG OFF SCREEN
+         */
+        Vector2 mousePos = Input.mousePosition;
+        if (hasLastMousePos)
         {
-            //ignore if that object is not us
-            if (hitResult.collider.gameObject != gameObject)
-            {
-                if (wasHittingLastFrame)
-                {
-                    OnCursorExit.Invoke();
-                    wasHittingLastFrame = false;
-                }
-                return;
-            }
-            
-            //Debug.Log($"Hit {hitResult.collider.gameObject.name} at {hitResult.textureCoord}");
-            
-            OnCursorInput.Invoke(hitResult.textureCoord);
-            wasHittingLastFrame = true;
-            //Debug.Log(hitResult.textureCoord); 
-            //testing new repo
-            
+            mouseDelta = mousePos - lastMousePos;
         }
         else
         {
-            // No hit at all - cursor is off the canvas
+            mouseDelta = Vector2.zero;
+        }
+        
+        lastMousePos = mousePos;
+        hasLastMousePos = true;
+
+        bool mouseHeld = Input.GetMouseButton(0);
+        
+        /*
+         * 
+         */
+
+        Ray mouseRay = Camera.main.ScreenPointToRay(mousePos);
+        RaycastHit hitResult;
+
+        if (Physics.Raycast(mouseRay, out hitResult, RaycastDistance, RaycastMask, QueryTriggerInteraction.Ignore))
+        {
+            if (hitResult.collider.gameObject == gameObject)
+            {
+                //so this gets our coordinates on the object that we hit.
+                //has calibration is true when we compute
+                //uvPerPixel from mouse movement (uv -> mouseDelta)
+                Vector2 canvasCoor = hitResult.textureCoord;
+
+                if (hasCalibration == false && mouseDelta.sqrMagnitude > 0.0001f) //checking for like the most subtle possible change
+                {
+                    hasCalibration = true;
+                }
+
+                if (mouseHeld && lastCanvasCoor != Vector2.zero && mouseDelta.sqrMagnitude > 0.0001f)
+                {
+                    Vector2 canvasChange = canvasCoor - lastCanvasCoor;
+
+                    // avoid division by zero
+                    if (Mathf.Abs(mouseDelta.x) > 0.001f)
+                    {
+                        uvPerPixel.x = canvasChange.x / mouseDelta.x;
+                    }
+
+                    if (Mathf.Abs(mouseDelta.y) > 0.001f)
+                    {
+                        uvPerPixel.y = canvasChange.y / mouseDelta.y;
+                    }
+                    
+                    hasCalibration = true; //just in case bc im not taking chances
+                }
+
+                lastCanvasCoor = canvasCoor;
+
+                if (mouseHeld)
+                {
+                    isDragging = true;
+                }
+
+                OnCursorInput.Invoke(canvasCoor);
+                wasHittingLastFrame = true;
+                return;
+            }
+            else
+            {
+                // other obj
+                GoOffCanvas(mouseHeld, mouseDelta);
+                return;
+            }
+        }
+        else
+        {
+            // nothing hit at all
+            GoOffCanvas(mouseHeld, mouseDelta);
+        }
+    }
+    private void GoOffCanvas(bool mouseHeld, Vector2 mouseDelta)
+    {
+        if (isDragging && mouseHeld && hasCalibration)
+        {
+            
+            Vector2 uvMove = new Vector2(mouseDelta.x * uvPerPixel.x,
+                mouseDelta.y * uvPerPixel.y
+            );
+
+            lastCanvasCoor += uvMove;
+            lastCanvasCoor.x = Mathf.Clamp01(lastCanvasCoor.x);
+            lastCanvasCoor.y = Mathf.Clamp01(lastCanvasCoor.y);
+
+            OnCursorInput.Invoke(lastCanvasCoor);
+            // do NOT treat this as an exit while dragging
+            wasHittingLastFrame = true;
+        }
+        else
+        {
+            // not dragging or mouse released: normal exit behaviour
             if (wasHittingLastFrame)
             {
                 OnCursorExit.Invoke();
                 wasHittingLastFrame = false;
             }
+
+            // stop dragging if mouse button not held
+            if (!mouseHeld)
+                isDragging = false;
         }
-        
     }
 }
