@@ -16,8 +16,3 @@ What we learned:
 3. How to integrate art, design, and programmng to customize Unity UI (especially with buttons).
 4. How to use Unity shader graphs. 
 
-
-Lead Artist and Graphic Designer: Loezee Liu
-Lead Programmer: Sally Nagle
-
-We collaborated on all of the narrative, level, and puzzle design. 
