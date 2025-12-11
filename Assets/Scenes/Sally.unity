@@ -7901,7 +7901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   triggerName: PlayErrorAnimation
-  page10button: {fileID: 0}
+  page10button: {fileID: 1141823447}
 --- !u!95 &583673422
 Animator:
   serializedVersion: 7
