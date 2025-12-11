@@ -7,6 +7,9 @@ public class errorAnimation : MonoBehaviour
     public string triggerName = "PlayErrorAnimation";
 
     [SerializeField] private Button page10button;
+    
+    public AudioSource audioSource;
+    public AudioClip errorSound;
 
     void Start()
     {
@@ -29,5 +32,6 @@ public class errorAnimation : MonoBehaviour
     {
         animator.enabled = true;
         animator.SetTrigger(triggerName);
+        audioSource.PlayOneShot(errorSound);
     }
 }
