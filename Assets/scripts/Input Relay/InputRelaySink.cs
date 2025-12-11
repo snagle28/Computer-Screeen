@@ -38,6 +38,7 @@ public class InputRelaySink : MonoBehaviour
         Vector3 mousePosition = new Vector3(CanvasTransform.sizeDelta.x * normalizedPosition.x,
             CanvasTransform.sizeDelta.y * normalizedPosition.y,
             0f);
+        
         Vector2 mousePos = new Vector2(mousePosition.x, mousePosition.y);
         // Convert normalized UV → screen pixel position
         Vector2 screenPos = new Vector2(
