@@ -1,18 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;  
+using UnityEngine.UI;
 
 public class errorAnimation : MonoBehaviour
 {
-    public Animator animator;  
-    public string triggerName = "PlayErrorAnimation";  
+    public Animator animator;
+    public string triggerName = "PlayErrorAnimation";
 
-    [SerializeField] private Button page10button;  
+    [SerializeField] private Button page10button;
 
     void Start()
     {
         if (page10button != null)
         {
-            page10button.onClick.AddListener(PlayAnimation);  
+            page10button.onClick.AddListener(PlayAnimation);
         }
 
         if (animator == null)
@@ -27,7 +27,7 @@ public class errorAnimation : MonoBehaviour
 
     void PlayAnimation()
     {
-        animator.enabled = true;  
-        animator.SetTrigger(triggerName);  
+        animator.enabled = true;
+        animator.SetTrigger(triggerName);
     }
 }
