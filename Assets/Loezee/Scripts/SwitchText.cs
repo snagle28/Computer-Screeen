@@ -117,6 +117,8 @@ public class SwitchText : MonoBehaviour
     // Called by SWAP button via OnClick() event
     public void TrySwapSelected()
     {
+        if (finalSwapDone) return; // can't switch after you're done
+        
         if (imageStage == 2)
             return;
         
@@ -146,6 +148,10 @@ public class SwitchText : MonoBehaviour
 
         if (includes12)
         {
+            if (baseSwapDone)
+            {
+                return;  // Skip this swap to prevent revert
+            }
             DoSwap(selectedA, selectedB);
         }
         else if (includes13)

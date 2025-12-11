@@ -31,7 +31,7 @@ public class SwitchText2 : MonoBehaviour
     public GameObject glitchOverlay;
 
     //static = shared by the pair so image only switches once
-    private  bool imageSwitched = false;
+    public  bool imageSwitched = false;
 
     void Awake()
     {
@@ -52,6 +52,7 @@ public class SwitchText2 : MonoBehaviour
 
     public void OnClick()
     {
+        if (puzzleDone) return;
         // toggle selection state
         isSelected = !isSelected;
         SetSelected();

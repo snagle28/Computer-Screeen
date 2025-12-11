@@ -164,5 +164,13 @@ public class InputSource : MonoBehaviour
             if (!mouseHeld)
                 isDragging = false;
         }
+
+        // NEW: Detect release during off-screen sim and force exit
+        if (isDragging && !mouseHeld && !wasHittingLastFrame)
+        {
+            print("should stop dragging now");
+            OnCursorExit.Invoke();  // Ensure cleanup on off-screen release
+            isDragging = false;
+        }
     }
 }
