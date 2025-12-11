@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LET'S GO FEED!
+  m_text: FEED!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -330,6 +330,150 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19196745}
   m_CullTransparentMesh: 1
+--- !u!1 &30369276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30369280}
+  - component: {fileID: 30369279}
+  - component: {fileID: 30369278}
+  - component: {fileID: 30369277}
+  m_Layer: 6
+  m_Name: glitchOffButtonInactive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &30369277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30369276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 30369278}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 64208990}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 64208990}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &30369278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30369276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.81761, g: 0.81761, b: 0.81761, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &30369279
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30369276}
+  m_CullTransparentMesh: 1
+--- !u!224 &30369280
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30369276}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000007720304}
+  m_LocalScale: {x: 0.9999666, y: 0.9999666, z: 0.9999666}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1872649325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 546.41437, y: -303.824}
+  m_SizeDelta: {x: 57.091, y: 20.536}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &38948029
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +657,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47140306}
   m_CullTransparentMesh: 1
+--- !u!1 &51437012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 1600240366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &64208990
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenMat: {fileID: 2100000, guid: 842091887595a514188700ad25dc700b, type: 2}
   glitchButton: {fileID: 516790116}
-  glitchOff: {fileID: 0}
+  glitchOff: {fileID: 30369277}
 --- !u!114 &64208993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +739,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 1141823447}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &64208994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +856,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 440394, guid: 1e96745f2b6e038469341687cbb28188, type: 3}
   m_PrefabInstance: {fileID: 70240058}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &91408680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 193507376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &116789507
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +900,7 @@ MonoBehaviour:
   displayImage2: {fileID: 350440669}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 638746035}
   imageSwitched: 0
 --- !u!114 &116789509
 MonoBehaviour:
@@ -1239,6 +1395,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 1447318564}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &168897698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1776,7 @@ MonoBehaviour:
   displayImage2: {fileID: 1972541502}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 939410178}
   imageSwitched: 0
 --- !u!114 &180043720
 MonoBehaviour:
@@ -1990,7 +2148,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: db97bdd6af8e7ee409a832b82807e425, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2883,6 +3041,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 227363018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &230166796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 180320, guid: 1e96745f2b6e038469341687cbb28188, type: 3}
+  m_PrefabInstance: {fileID: 70240058}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &247342207
 GameObject:
@@ -3799,6 +3962,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 2127412206}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &284435360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4156,7 +4321,7 @@ MonoBehaviour:
   displayImage2: {fileID: 350440669}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 698510355}
   imageSwitched: 0
 --- !u!114 &291252687
 MonoBehaviour:
@@ -4817,7 +4982,7 @@ MonoBehaviour:
   displayImage2: {fileID: 924803710}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 91408680}
   imageSwitched: 0
 --- !u!114 &351058348
 MonoBehaviour:
@@ -5397,9 +5562,9 @@ MonoBehaviour:
   image3: {fileID: 1457026440}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 0}
-  glitchOverlay2: {fileID: 0}
-  glitchOverlay3: {fileID: 0}
+  glitchOverlay1: {fileID: 488784815}
+  glitchOverlay2: {fileID: 1865235277}
+  glitchOverlay3: {fileID: 1792455937}
 --- !u!114 &367832824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5929,7 +6094,7 @@ MonoBehaviour:
   displayImage2: {fileID: 305615590}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 803147990}
   imageSwitched: 0
 --- !u!114 &411869652
 MonoBehaviour:
@@ -6915,6 +7080,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 484983658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &488784815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 251855854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &496674337
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,7 +7283,7 @@ MonoBehaviour:
   displayImage2: {fileID: 352872837}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 1418879373}
   imageSwitched: 0
 --- !u!114 &504192961
 MonoBehaviour:
@@ -8024,6 +8194,7 @@ GameObject:
   - component: {fileID: 583673423}
   - component: {fileID: 583673422}
   - component: {fileID: 583673421}
+  - component: {fileID: 583673425}
   m_Layer: 0
   m_Name: errorsAnimation
   m_TagString: Untagged
@@ -8046,6 +8217,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   triggerName: playError
   page10button: {fileID: 1141823447}
+  audioSource: {fileID: 183427674}
+  errorSound: {fileID: 8300000, guid: 645970d36bd27df48bbf05994382b31d, type: 3}
+  enviroGlitch: {fileID: 583673425}
 --- !u!95 &583673422
 Animator:
   serializedVersion: 7
@@ -8138,6 +8312,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 21.873, y: -335.888, z: 0.25}
+--- !u!114 &583673425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583673420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2310846e839b55f4bb874dc95e2ed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationDelay: 0
+  objectsToGlitch:
+  - {fileID: 2058700898}
+  - {fileID: 230166796}
+  - {fileID: 1519354265}
+  - {fileID: 222915773}
+  glitchMaterial: {fileID: -876546973899608171, guid: 5ecbb195f60d91e429c8a2d83015fdcf, type: 3}
+  minInterval: 0.1
+  maxInterval: 0.5
+  minGlitchDuration: 0.05
+  maxGlitchDuration: 0.2
+  minPerGlitch: 1
+  maxPerGlitch: 3
+  readyForFinalAnim: 0
 --- !u!1 &619100176
 GameObject:
   m_ObjectHideFlags: 0
@@ -8259,7 +8459,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1335444378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6880244}
+  m_AnchorMin: {x: 0, y: 0.685855}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -8396,8 +8596,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 621073855}
   m_HandleRect: {fileID: 621073853}
   m_Direction: 2
-  m_Value: 1.0000019
-  m_Size: 0.31197563
+  m_Value: 1.0000002
+  m_Size: 0.31414503
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8576,6 +8776,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638169714}
   m_CullTransparentMesh: 1
+--- !u!1 &638746035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 250189020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &653260693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8651,6 +8856,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653260693}
   m_CullTransparentMesh: 1
+--- !u!1 &660430163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 502364502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &678268424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9011,6 +9221,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692417372}
   m_CullTransparentMesh: 1
+--- !u!1 &698510355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 425912429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &723598285
 GameObject:
   m_ObjectHideFlags: 0
@@ -9383,6 +9598,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742350236}
   m_CullTransparentMesh: 1
+--- !u!1 &744186364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 1542873390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &750252212
 GameObject:
   m_ObjectHideFlags: 0
@@ -9948,6 +10168,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800026655}
   m_CullTransparentMesh: 1
+--- !u!1 &803147990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 434045491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &820832696
 GameObject:
   m_ObjectHideFlags: 0
@@ -10293,6 +10518,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840955903}
   m_CullTransparentMesh: 1
+--- !u!1 &846084907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 930500413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862857915
 GameObject:
   m_ObjectHideFlags: 0
@@ -10641,6 +10871,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872201270}
   m_CullTransparentMesh: 1
+--- !u!1 &880142716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 1396070960}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &885896079
 GameObject:
   m_ObjectHideFlags: 0
@@ -11134,6 +11369,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 930500413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &939410178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 980441018}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &942758307
 GameObject:
@@ -12873,7 +13113,7 @@ MonoBehaviour:
   displayImage2: {fileID: 305615590}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 880142716}
   imageSwitched: 0
 --- !u!114 &1054109484
 MonoBehaviour:
@@ -13068,7 +13308,7 @@ MonoBehaviour:
   displayImage2: {fileID: 1283592356}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 846084907}
   imageSwitched: 0
 --- !u!114 &1066566195
 MonoBehaviour:
@@ -13247,9 +13487,9 @@ MonoBehaviour:
   image3: {fileID: 800026657}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 0}
-  glitchOverlay2: {fileID: 0}
-  glitchOverlay3: {fileID: 0}
+  glitchOverlay1: {fileID: 744186364}
+  glitchOverlay2: {fileID: 2069202912}
+  glitchOverlay3: {fileID: 660430163}
 --- !u!114 &1100033363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14254,7 +14494,7 @@ MonoBehaviour:
   displayImage2: {fileID: 352872837}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 1994243468}
   imageSwitched: 0
 --- !u!114 &1191657655
 MonoBehaviour:
@@ -14997,7 +15237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.002427088}
+  m_AnchoredPosition: {x: 0, y: -0.00039277467}
   m_SizeDelta: {x: 0, y: 1889.374}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1238783026
@@ -17900,6 +18140,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1418879373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 182869552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1429024757
 GameObject:
   m_ObjectHideFlags: 0
@@ -18378,7 +18623,8 @@ MonoBehaviour:
         m_CallState: 2
   audioSource: {fileID: 183427674}
   quacksound: {fileID: 8300000, guid: 25ca188f093f73d43a8da480ad2f99b4, type: 3}
-  clickSound: {fileID: 8300000, guid: 4ac6b579aaa34a04dbf3bd0521fb5bd9, type: 3}
+  clickDownSound: {fileID: 8300000, guid: d3666bca4a851724f89897c2beef54bf, type: 3}
+  clickUpSound: {fileID: 8300000, guid: 25d6333bed9eda04489a5124d6d65b4c, type: 3}
 --- !u!114 &1442651822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19187,6 +19433,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 249873559}
   buttonConcealer: {fileID: 1679172190}
+  audioSource: {fileID: 183427674}
+  allPuzzlesSolved: {fileID: 8300000, guid: bdc920cb6adcf35419b7305a284c343b, type: 3}
 --- !u!114 &1513888302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19264,7 +19512,7 @@ MonoBehaviour:
   displayImage2: {fileID: 924803710}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 1745263186}
   imageSwitched: 0
 --- !u!114 &1514744116
 MonoBehaviour:
@@ -19381,6 +19629,11 @@ RectTransform:
   m_AnchoredPosition: {x: -298.2, y: 517.1}
   m_SizeDelta: {x: 57, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1519354265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 6032c6f928e00a546b0269494a1694a3, type: 3}
+  m_PrefabInstance: {fileID: 529768965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1530693081
 GameObject:
   m_ObjectHideFlags: 0
@@ -20394,6 +20647,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 963059977}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &1583046825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20729,7 +20984,7 @@ MonoBehaviour:
   displayImage2: {fileID: 1283592356}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 51437012}
   imageSwitched: 0
 --- !u!114 &1622589992
 MonoBehaviour:
@@ -21669,6 +21924,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738214070}
   m_CullTransparentMesh: 1
+--- !u!1 &1745263186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 569429987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765594926
 GameObject:
   m_ObjectHideFlags: 0
@@ -21917,7 +22177,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2081870148}
   m_Direction: 2
   m_Value: 1.0000006
-  m_Size: 0.31350282
+  m_Size: 0.31414634
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -21960,6 +22220,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790818342}
   m_CullTransparentMesh: 1
+--- !u!1 &1792455937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 484983658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1804146116
 GameObject:
   m_ObjectHideFlags: 0
@@ -21999,7 +22264,7 @@ MonoBehaviour:
   displayImage2: {fileID: 1972541502}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
+  glitchOverlay: {fileID: 2055485291}
   imageSwitched: 0
 --- !u!114 &1804146118
 MonoBehaviour:
@@ -22168,7 +22433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814a6972aa0f0784783040ce2dc1d5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenMat: {fileID: 2100000, guid: dab12b9bc08cf414ca542af4e9c4d4f7, type: 2}
+  screenMat: {fileID: 2100000, guid: 842091887595a514188700ad25dc700b, type: 2}
   glitchButton: {fileID: 440157601}
   glitchOff: {fileID: 440157601}
 --- !u!114 &1806756192
@@ -22193,6 +22458,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 440157601}
   buttonConcealer: {fileID: 1349126680}
+  audioSource: {fileID: 183427674}
+  allPuzzlesSolved: {fileID: 8300000, guid: d0555eeceb2924e4a9a0b977f8fb8eb0, type: 3}
 --- !u!114 &1806756193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22380,6 +22647,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 1246878851}
   buttonConcealer: {fileID: 1241205047}
+  audioSource: {fileID: 183427674}
+  allPuzzlesSolved: {fileID: 8300000, guid: 15534954b5e7519498864e43cdd62a3b, type: 3}
 --- !u!114 &1852121067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22534,6 +22803,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1248718e1aef0e4f8b349d6e89e4a5e, type: 3}
   m_PrefabInstance: {fileID: 678268424}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1865235277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 1317807775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1872649324
 GameObject:
   m_ObjectHideFlags: 0
@@ -22567,6 +22841,7 @@ RectTransform:
   m_Children:
   - {fileID: 496674338}
   - {fileID: 1141823446}
+  - {fileID: 30369280}
   - {fileID: 1448214396}
   - {fileID: 307551748}
   m_Father: {fileID: 1976674088}
@@ -23831,6 +24106,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 922168326}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &1959534888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24508,6 +24785,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984167313}
   m_CullTransparentMesh: 1
+--- !u!1 &1994243468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 1105295424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2039764935
 GameObject:
   m_ObjectHideFlags: 0
@@ -24545,6 +24827,16 @@ RectTransform:
   m_AnchoredPosition: {x: 29.231281, y: -664.17786}
   m_SizeDelta: {x: 308.97125, y: 246.79828}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2055485291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 752722539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2058700898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5902971270548390587, guid: e1248718e1aef0e4f8b349d6e89e4a5e, type: 3}
+  m_PrefabInstance: {fileID: 678268424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2065310854
 GameObject:
   m_ObjectHideFlags: 0
@@ -24621,6 +24913,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065310854}
   m_CullTransparentMesh: 1
+--- !u!1 &2069202912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
+  m_PrefabInstance: {fileID: 987308764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2069745935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24738,7 +25035,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1039816570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6864972}
+  m_AnchorMin: {x: 0, y: 0.68585366}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}

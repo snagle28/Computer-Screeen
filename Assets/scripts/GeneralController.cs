@@ -26,13 +26,21 @@ public class GeneralController : MonoBehaviour
 
     [Header("Put the GameObject that you want to cover the button here. It should have an image or sprite component attached.")]
     public GameObject buttonConcealer;
-
     
+    public AudioSource audioSource;
+    public AudioClip allPuzzlesSolved;
+
+    private bool hasPlayedSound = false;
     // Update is called once per frame
     void Update()
     {
         if (DoneAllPuzzles() == true)
         {
+            if (!hasPlayedSound)
+            {
+                audioSource.PlayOneShot(allPuzzlesSolved);
+                hasPlayedSound = true;
+            }
             Image myImg = nextPageButton.GetComponent<Image>();
             GameObject buttonOBj = nextPageButton.gameObject;
             buttonOBj.SetActive(true);
