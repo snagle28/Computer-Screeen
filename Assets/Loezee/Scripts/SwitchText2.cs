@@ -28,7 +28,7 @@ public class SwitchText2 : MonoBehaviour
     public bool puzzleDone = false;
     
     
-    
+    public GameObject glitchOverlay;
 
     //static = shared by the pair so image only switches once
     public  bool imageSwitched = false;
@@ -61,6 +61,8 @@ public class SwitchText2 : MonoBehaviour
             SwapPositions();
             puzzleDone = true;
             partner.puzzleDone = true;
+            glitchOverlay.SetActive(false);
+            partner.glitchOverlay.SetActive(false);
             Debug.Log("Puzzle done");
         }
     }
