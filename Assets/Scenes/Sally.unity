@@ -739,6 +739,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 1141823447}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &64208994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,6 +1395,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 1447318564}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &168897698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2144,7 +2148,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: db97bdd6af8e7ee409a832b82807e425, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3037,6 +3041,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 227363018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &230166796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 180320, guid: 1e96745f2b6e038469341687cbb28188, type: 3}
+  m_PrefabInstance: {fileID: 70240058}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &247342207
 GameObject:
@@ -3953,6 +3962,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 2127412206}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &284435360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8183,6 +8194,7 @@ GameObject:
   - component: {fileID: 583673423}
   - component: {fileID: 583673422}
   - component: {fileID: 583673421}
+  - component: {fileID: 583673425}
   m_Layer: 0
   m_Name: errorsAnimation
   m_TagString: Untagged
@@ -8207,6 +8219,7 @@ MonoBehaviour:
   page10button: {fileID: 1141823447}
   audioSource: {fileID: 183427674}
   errorSound: {fileID: 8300000, guid: 645970d36bd27df48bbf05994382b31d, type: 3}
+  enviroGlitch: {fileID: 583673425}
 --- !u!95 &583673422
 Animator:
   serializedVersion: 7
@@ -8299,6 +8312,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 21.873, y: -335.888, z: 0.25}
+--- !u!114 &583673425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583673420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2310846e839b55f4bb874dc95e2ed406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationDelay: 0
+  objectsToGlitch:
+  - {fileID: 2058700898}
+  - {fileID: 230166796}
+  - {fileID: 1519354265}
+  - {fileID: 222915773}
+  glitchMaterial: {fileID: -876546973899608171, guid: 5ecbb195f60d91e429c8a2d83015fdcf, type: 3}
+  minInterval: 0.1
+  maxInterval: 0.5
+  minGlitchDuration: 0.05
+  maxGlitchDuration: 0.2
+  minPerGlitch: 1
+  maxPerGlitch: 3
+  readyForFinalAnim: 0
 --- !u!1 &619100176
 GameObject:
   m_ObjectHideFlags: 0
@@ -8420,7 +8459,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1335444378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6880244}
+  m_AnchorMin: {x: 0, y: 0.685855}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -8557,8 +8596,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 621073855}
   m_HandleRect: {fileID: 621073853}
   m_Direction: 2
-  m_Value: 1.0000019
-  m_Size: 0.31197563
+  m_Value: 1.0000002
+  m_Size: 0.31414503
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15198,7 +15237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.002427088}
+  m_AnchoredPosition: {x: 0, y: -0.00039277467}
   m_SizeDelta: {x: 0, y: 1889.374}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1238783026
@@ -18584,7 +18623,8 @@ MonoBehaviour:
         m_CallState: 2
   audioSource: {fileID: 183427674}
   quacksound: {fileID: 8300000, guid: 25ca188f093f73d43a8da480ad2f99b4, type: 3}
-  clickSound: {fileID: 8300000, guid: 4ac6b579aaa34a04dbf3bd0521fb5bd9, type: 3}
+  clickDownSound: {fileID: 8300000, guid: d3666bca4a851724f89897c2beef54bf, type: 3}
+  clickUpSound: {fileID: 8300000, guid: 25d6333bed9eda04489a5124d6d65b4c, type: 3}
 --- !u!114 &1442651822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19393,6 +19433,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 249873559}
   buttonConcealer: {fileID: 1679172190}
+  audioSource: {fileID: 183427674}
+  allPuzzlesSolved: {fileID: 8300000, guid: bdc920cb6adcf35419b7305a284c343b, type: 3}
 --- !u!114 &1513888302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19587,6 +19629,11 @@ RectTransform:
   m_AnchoredPosition: {x: -298.2, y: 517.1}
   m_SizeDelta: {x: 57, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1519354265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: 6032c6f928e00a546b0269494a1694a3, type: 3}
+  m_PrefabInstance: {fileID: 529768965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1530693081
 GameObject:
   m_ObjectHideFlags: 0
@@ -20600,6 +20647,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 963059977}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &1583046825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22128,7 +22177,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2081870148}
   m_Direction: 2
   m_Value: 1.0000006
-  m_Size: 0.31350282
+  m_Size: 0.31414634
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22409,6 +22458,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 440157601}
   buttonConcealer: {fileID: 1349126680}
+  audioSource: {fileID: 183427674}
+  allPuzzlesSolved: {fileID: 8300000, guid: d0555eeceb2924e4a9a0b977f8fb8eb0, type: 3}
 --- !u!114 &1806756193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22596,6 +22647,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 1246878851}
   buttonConcealer: {fileID: 1241205047}
+  audioSource: {fileID: 183427674}
+  allPuzzlesSolved: {fileID: 8300000, guid: 15534954b5e7519498864e43cdd62a3b, type: 3}
 --- !u!114 &1852121067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24053,6 +24106,8 @@ MonoBehaviour:
   allPuzzlesComplete: 0
   nextPageButton: {fileID: 922168326}
   buttonConcealer: {fileID: 0}
+  audioSource: {fileID: 0}
+  allPuzzlesSolved: {fileID: 0}
 --- !u!114 &1959534888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24777,6 +24832,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 752722539}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2058700898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5902971270548390587, guid: e1248718e1aef0e4f8b349d6e89e4a5e, type: 3}
+  m_PrefabInstance: {fileID: 678268424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2065310854
 GameObject:
   m_ObjectHideFlags: 0
@@ -24975,7 +25035,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1039816570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.6864972}
+  m_AnchorMin: {x: 0, y: 0.68585366}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}

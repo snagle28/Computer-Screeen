@@ -31,7 +31,8 @@ public class InputSource : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip quacksound;
 
-    public AudioClip clickSound;
+    public AudioClip clickDownSound;
+    public AudioClip clickUpSound;
 
     void Start()
     {
@@ -75,7 +76,12 @@ public class InputSource : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    audioSource.PlayOneShot(clickSound);
+                    audioSource.PlayOneShot(clickDownSound);
+                }
+
+                if (Input.GetMouseButtonUp(0))
+                {
+                    audioSource.PlayOneShot(clickUpSound);
                 }
                 //so this gets our coordinates on the object that we hit.
                 //has calibration is true when we compute
