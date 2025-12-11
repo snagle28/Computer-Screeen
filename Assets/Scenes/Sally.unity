@@ -453,7 +453,6 @@ MonoBehaviour:
   displayImage2: {fileID: 988445178}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 308019040}
 --- !u!1 &27619475
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +639,6 @@ MonoBehaviour:
   displayImage2: {fileID: 1481508905}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &27664793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2762,7 +2760,6 @@ MonoBehaviour:
   displayImage2: {fileID: 0}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &206820941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4009,23 +4006,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationDelay: 0
-  objectsToGlitch:
-  - {fileID: 2087503198}
-  - {fileID: 866777987}
-  - {fileID: 1227731777}
-  - {fileID: 529768966}
-  - {fileID: 330556769}
-  - {fileID: 222915773}
-  - {fileID: 330556771}
-  - {fileID: 1889221855}
-  glitchMaterial: {fileID: -876546973899608171, guid: 5ecbb195f60d91e429c8a2d83015fdcf, type: 3}
-  minInterval: 0.1
-  maxInterval: 0.5
-  minGlitchDuration: 0.05
-  maxGlitchDuration: 0.2
-  minPerGlitch: 3
-  maxPerGlitch: 7
-  readyForFinalAnim: 0
+  objectsToGltch: []
+  TimerMinimum: 0
+  TimerMaximum: 0
+  GlitchMaterial: {fileID: 0}
 --- !u!1 &296002189
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,11 +4185,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307432045}
   m_CullTransparentMesh: 1
---- !u!1 &308019040 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 1222364896}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &314559254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,9 +4226,6 @@ MonoBehaviour:
   image3: {fileID: 0}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 0}
-  glitchOverlay2: {fileID: 0}
-  glitchOverlay3: {fileID: 0}
 --- !u!114 &314559256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4365,11 +4341,6 @@ RectTransform:
   m_AnchoredPosition: {x: -53.6, y: -1102}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &319993333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 2035986586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &320446403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4660,16 +4631,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad63b1ef0afade541b8cd48534103574, type: 3}
---- !u!1 &330556769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6613902702502849550, guid: ad63b1ef0afade541b8cd48534103574, type: 3}
-  m_PrefabInstance: {fileID: 330556768}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &330556771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2052252764548367595, guid: ad63b1ef0afade541b8cd48534103574, type: 3}
-  m_PrefabInstance: {fileID: 330556768}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &334556566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5328,7 +5289,6 @@ MonoBehaviour:
   displayImage2: {fileID: 1449478365}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 1513529321}
 --- !u!114 &386306247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7549,7 +7509,6 @@ MonoBehaviour:
   displayImage2: {fileID: 1449478365}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 1246533949}
 --- !u!114 &579901372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8263,7 +8222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &628870495
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8545,11 +8504,6 @@ PrefabInstance:
 --- !u!224 &644983002 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 644983001}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &644983003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 644983001}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &667141892
@@ -9035,7 +8989,6 @@ MonoBehaviour:
   displayImage2: {fileID: 0}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &684211277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9377,11 +9330,6 @@ PrefabInstance:
 --- !u!224 &717019633 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 717019632}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &717019634 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 717019632}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &719031314
@@ -10596,7 +10544,6 @@ MonoBehaviour:
   displayImage2: {fileID: 1481508905}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &853951055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11141,7 +11088,6 @@ MonoBehaviour:
   displayImage2: {fileID: 0}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &864516766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11236,11 +11182,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864516763}
   m_CullTransparentMesh: 1
---- !u!1 &866777987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8643481354314063903, guid: ad63b1ef0afade541b8cd48534103574, type: 3}
-  m_PrefabInstance: {fileID: 330556768}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &875624559
 GameObject:
   m_ObjectHideFlags: 0
@@ -12759,7 +12700,6 @@ MonoBehaviour:
   displayImage2: {fileID: 0}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &1076657511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12951,11 +12891,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
---- !u!1 &1091828475 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 1091828474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1091828476 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
@@ -14566,9 +14501,6 @@ MonoBehaviour:
   image3: {fileID: 0}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 0}
-  glitchOverlay2: {fileID: 0}
-  glitchOverlay3: {fileID: 0}
 --- !u!114 &1216339351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14786,11 +14718,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
   m_PrefabInstance: {fileID: 1222364896}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1227731777 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 180320, guid: 1e96745f2b6e038469341687cbb28188, type: 3}
-  m_PrefabInstance: {fileID: 70240058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1238363875
 GameObject:
   m_ObjectHideFlags: 0
@@ -14906,11 +14833,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238363875}
   m_CullTransparentMesh: 1
---- !u!1 &1246533949 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 1291528678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1246533952 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
@@ -15066,9 +14988,6 @@ MonoBehaviour:
   image3: {fileID: 1814006231}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 0}
-  glitchOverlay2: {fileID: 0}
-  glitchOverlay3: {fileID: 0}
 --- !u!114 &1249954837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16092,9 +16011,6 @@ MonoBehaviour:
   image3: {fileID: 361196780}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 717019634}
-  glitchOverlay2: {fileID: 1091828475}
-  glitchOverlay3: {fileID: 488209596905212096}
 --- !u!114 &1329209661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16249,7 +16165,6 @@ MonoBehaviour:
   displayImage2: {fileID: 0}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &1349232662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17383,9 +17298,6 @@ MonoBehaviour:
   OnCursorExit:
     m_PersistentCalls:
       m_Calls: []
-  audioSource: {fileID: 353535405}
-  quacksound: {fileID: 8300000, guid: 25ca188f093f73d43a8da480ad2f99b4, type: 3}
-  clickSound: {fileID: 8300000, guid: 4ac6b579aaa34a04dbf3bd0521fb5bd9, type: 3}
 --- !u!114 &1442651822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17442,9 +17354,6 @@ MonoBehaviour:
   image3: {fileID: 0}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 0}
-  glitchOverlay2: {fileID: 0}
-  glitchOverlay3: {fileID: 0}
 --- !u!114 &1448216147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17674,7 +17583,6 @@ MonoBehaviour:
   displayImage2: {fileID: 433937412}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &1454851238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18064,11 +17972,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
---- !u!1 &1489404556 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 1489404555}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1489404557 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
@@ -18182,11 +18085,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495498835}
   m_CullTransparentMesh: 1
---- !u!1 &1513529321 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 1212505119}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1513529322 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
@@ -18776,7 +18674,6 @@ MonoBehaviour:
   displayImage2: {fileID: 988445178}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 319993333}
 --- !u!1 &1582427680
 GameObject:
   m_ObjectHideFlags: 0
@@ -19553,7 +19450,6 @@ MonoBehaviour:
   displayImage2: {fileID: 222382019}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &1602435640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19911,7 +19807,6 @@ MonoBehaviour:
   displayImage2: {fileID: 1594404077}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 1489404556}
 --- !u!114 &1620916651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20295,9 +20190,6 @@ MonoBehaviour:
   image3: {fileID: 0}
   isSelected: 0
   finalSwapDone: 0
-  glitchOverlay1: {fileID: 0}
-  glitchOverlay2: {fileID: 0}
-  glitchOverlay3: {fileID: 0}
 --- !u!114 &1685220945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20474,7 +20366,6 @@ MonoBehaviour:
   displayImage2: {fileID: 433937412}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &1698173250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21562,11 +21453,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869027399}
   m_CullTransparentMesh: 1
---- !u!1 &1889221855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5902971270548390587, guid: e1248718e1aef0e4f8b349d6e89e4a5e, type: 3}
-  m_PrefabInstance: {fileID: 678268424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1890914658
 GameObject:
   m_ObjectHideFlags: 0
@@ -23372,7 +23258,6 @@ MonoBehaviour:
   displayImage2: {fileID: 1594404077}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 644983003}
 --- !u!114 &2062065120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23795,11 +23680,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085246868}
   m_CullTransparentMesh: 1
---- !u!1 &2087503198 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -6519009750602378086, guid: ad63b1ef0afade541b8cd48534103574, type: 3}
-  m_PrefabInstance: {fileID: 330556768}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2091581568
 GameObject:
   m_ObjectHideFlags: 0
@@ -24140,7 +24020,6 @@ MonoBehaviour:
   displayImage2: {fileID: 222382019}
   isController: 1
   puzzleDone: 0
-  glitchOverlay: {fileID: 0}
 --- !u!114 &2119687377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24856,11 +24735,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
---- !u!1 &488209596905212096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
-  m_PrefabInstance: {fileID: 488209596905212095}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &488209596905212097 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 574856407781622187, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
