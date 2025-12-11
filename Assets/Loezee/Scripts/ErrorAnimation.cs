@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class errorAnimation : MonoBehaviour
 {
     public Animator animator;  
-    public string triggerName = "PlayErrorAnimation";  
+    public string triggerName = "playError";  
 
     [SerializeField] private Button page10button;  
 
@@ -24,10 +24,10 @@ public class errorAnimation : MonoBehaviour
         animator.enabled = false; 
     }
 
-
     void PlayAnimation()
     {
-        animator.enabled = true;  
-        animator.SetTrigger(triggerName);  
+        Debug.Log("pressed, playing animation");
+        animator.enabled = true;
+        animator.SetTrigger(triggerName);
     }
 }
