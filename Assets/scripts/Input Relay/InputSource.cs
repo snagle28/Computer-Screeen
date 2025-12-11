@@ -27,6 +27,11 @@ public class InputSource : MonoBehaviour
     private Vector2 uvPerPixel = Vector2.zero;
     private bool hasCalibration = false; //true when we compute uvPerPixel. NEED THIS 
     //b4 we simulate moevemnt
+    
+    public AudioSource audioSource;
+    public AudioClip quacksound;
+
+    public AudioClip clickSound;
 
     void Start()
     {
@@ -68,6 +73,10 @@ public class InputSource : MonoBehaviour
         {
             if (hitResult.collider.gameObject == gameObject)
             {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    audioSource.PlayOneShot(clickSound);
+                }
                 //so this gets our coordinates on the object that we hit.
                 //has calibration is true when we compute
                 //uvPerPixel from mouse movement (uv -> mouseDelta)
@@ -111,6 +120,11 @@ public class InputSource : MonoBehaviour
             {
                 // other obj
                 GoOffCanvas(mouseHeld, mouseDelta);
+                Debug.Log(hitResult.collider.gameObject.name);
+                if ((hitResult.collider.gameObject.tag == "duck") && Input.GetMouseButtonDown(0))
+                {
+                    audioSource.PlayOneShot(quacksound);
+                }
                 return;
             }
         }
@@ -149,6 +163,14 @@ public class InputSource : MonoBehaviour
             // stop dragging if mouse button not held
             if (!mouseHeld)
                 isDragging = false;
+        }
+
+        // NEW: Detect release during off-screen sim and force exit
+        if (isDragging && !mouseHeld && !wasHittingLastFrame)
+        {
+            print("should stop dragging now");
+            OnCursorExit.Invoke();  // Ensure cleanup on off-screen release
+            isDragging = false;
         }
     }
 }

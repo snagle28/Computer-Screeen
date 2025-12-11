@@ -36,6 +36,12 @@ public class SwitchText : MonoBehaviour
     private bool baseSwapDone = false;
     
     public bool finalSwapDone = false;
+    
+    [Header("Glitch Overlay")]
+    public GameObject glitchOverlay1;
+
+    public GameObject glitchOverlay2;
+    public GameObject glitchOverlay3;
 
     void Awake()
     {
@@ -61,7 +67,17 @@ public class SwitchText : MonoBehaviour
         if (isController)
         {
             TrySwapSelected();
+            if (finalSwapDone)
+            {
+                if (glitchOverlay1 != null && glitchOverlay2 != null && glitchOverlay3 != null)
+                {
+                    glitchOverlay1.SetActive(false);
+                    glitchOverlay2.SetActive(false);
+                    glitchOverlay3.SetActive(false);
+                } 
+            }
         }
+        
     }
 
     private void ToggleSelect(SwitchText selected)
@@ -101,6 +117,8 @@ public class SwitchText : MonoBehaviour
     // Called by SWAP button via OnClick() event
     public void TrySwapSelected()
     {
+        if (finalSwapDone) return; // can't switch after you're done
+        
         if (imageStage == 2)
             return;
         
@@ -130,6 +148,10 @@ public class SwitchText : MonoBehaviour
 
         if (includes12)
         {
+            if (baseSwapDone)
+            {
+                return;  // Skip this swap to prevent revert
+            }
             DoSwap(selectedA, selectedB);
         }
         else if (includes13)
@@ -203,6 +225,7 @@ public class SwitchText : MonoBehaviour
         {
             Debug.Log("Final swap done");
             finalSwapDone = true;
+            //( glitchOverlay.activeSelf)
         }
     }
 }

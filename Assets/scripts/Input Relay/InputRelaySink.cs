@@ -38,7 +38,6 @@ public class InputRelaySink : MonoBehaviour
         Vector3 mousePosition = new Vector3(CanvasTransform.sizeDelta.x * normalizedPosition.x,
             CanvasTransform.sizeDelta.y * normalizedPosition.y,
             0f);
-        
         Vector2 mousePos = new Vector2(mousePosition.x, mousePosition.y);
         // Convert normalized UV → screen pixel position
         Vector2 screenPos = new Vector2(
@@ -207,34 +206,37 @@ public class InputRelaySink : MonoBehaviour
         }
     }
     public void OnCursorExit()
+{
+    // Cancel any active drag when cursor leaves the canvas
+    if (activeDT != null)  // Removed && Input.GetMouseButton(0) to handle off-screen releases
     {
-        // Cancel any active drag when cursor leaves the canvas
-        if (activeDT != null && Input.GetMouseButton(0))
+        if (perPointer != null)
         {
-            if (perPointer != null)
-            {
-                ExecuteEvents.Execute(activeDT, perPointer, ExecuteEvents.endDragHandler);
-                
-                if (perPointer.pointerPress != null)
-                {
-                    ExecuteEvents.Execute(perPointer.pointerPress, perPointer, ExecuteEvents.pointerUpHandler);
-                }
-            }
+            ExecuteEvents.Execute(activeDT, perPointer, ExecuteEvents.endDragHandler);
             
-            foreach (var t in DragTargets)
+            if (perPointer.pointerPress != null)
             {
-                if (t != activeDT && perPointer != null)
-                {
-                    ExecuteEvents.Execute(t, perPointer, ExecuteEvents.endDragHandler);
-                }
+                ExecuteEvents.Execute(perPointer.pointerPress, perPointer, ExecuteEvents.pointerUpHandler);
             }
-            
-            DragTargets.Clear();
-            activeDT = null;
-            perPointer = null;
-            lastMousePos = Vector2.zero;
         }
+        
+        foreach (var t in DragTargets)
+        {
+            if (t != activeDT && perPointer != null)
+            {
+                ExecuteEvents.Execute(t, perPointer, ExecuteEvents.endDragHandler);
+            }
+        }
+        
+        DragTargets.Clear();
+        activeDT = null;
+        perPointer = null;
+        lastMousePos = Vector2.zero;
+
+        
+        Debug.Log("should stop dragging now");
     }
+}
 
     
     
