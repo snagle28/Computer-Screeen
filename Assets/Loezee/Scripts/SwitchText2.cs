@@ -31,7 +31,7 @@ public class SwitchText2 : MonoBehaviour
     
 
     //static = shared by the pair so image only switches once
-    public  bool imageSwitched = false;
+    private  bool imageSwitched = false;
 
     void Awake()
     {
@@ -52,7 +52,6 @@ public class SwitchText2 : MonoBehaviour
 
     public void OnClick()
     {
-        if (puzzleDone) return;
         // toggle selection state
         isSelected = !isSelected;
         SetSelected();

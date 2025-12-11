@@ -207,37 +207,34 @@ public class InputRelaySink : MonoBehaviour
         }
     }
     public void OnCursorExit()
-{
-    // Cancel any active drag when cursor leaves the canvas
-    if (activeDT != null)  // Removed && Input.GetMouseButton(0) to handle off-screen releases
     {
-        if (perPointer != null)
+        // Cancel any active drag when cursor leaves the canvas
+        if (activeDT != null && Input.GetMouseButton(0))
         {
-            ExecuteEvents.Execute(activeDT, perPointer, ExecuteEvents.endDragHandler);
+            if (perPointer != null)
+            {
+                ExecuteEvents.Execute(activeDT, perPointer, ExecuteEvents.endDragHandler);
+                
+                if (perPointer.pointerPress != null)
+                {
+                    ExecuteEvents.Execute(perPointer.pointerPress, perPointer, ExecuteEvents.pointerUpHandler);
+                }
+            }
             
-            if (perPointer.pointerPress != null)
+            foreach (var t in DragTargets)
             {
-                ExecuteEvents.Execute(perPointer.pointerPress, perPointer, ExecuteEvents.pointerUpHandler);
+                if (t != activeDT && perPointer != null)
+                {
+                    ExecuteEvents.Execute(t, perPointer, ExecuteEvents.endDragHandler);
+                }
             }
+            
+            DragTargets.Clear();
+            activeDT = null;
+            perPointer = null;
+            lastMousePos = Vector2.zero;
         }
-        
-        foreach (var t in DragTargets)
-        {
-            if (t != activeDT && perPointer != null)
-            {
-                ExecuteEvents.Execute(t, perPointer, ExecuteEvents.endDragHandler);
-            }
-        }
-        
-        DragTargets.Clear();
-        activeDT = null;
-        perPointer = null;
-        lastMousePos = Vector2.zero;
-
-        
-        Debug.Log("should stop dragging now");
     }
-}
 
     
     
