@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class InputSource : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class InputSource : MonoBehaviour
     public AudioClip clickDownSound;
     public AudioClip clickUpSound;
 
+    //vars relating to newspaper popup
+    public GameObject newspaper;
+    public Button newspaperButton;
+    
+    
     void Start()
     {
         // initialize lastMousePos so first delta isn’t huge
@@ -126,10 +132,17 @@ public class InputSource : MonoBehaviour
             {
                 // other obj
                 GoOffCanvas(mouseHeld, mouseDelta);
-                Debug.Log(hitResult.collider.gameObject.name);
+                //Debug.Log(hitResult.collider.gameObject.name);
                 if ((hitResult.collider.gameObject.tag == "duck") && Input.GetMouseButtonDown(0))
                 {
                     audioSource.PlayOneShot(quacksound);
+                }
+                else if ((hitResult.collider.gameObject.tag == "paper") && Input.GetMouseButtonUp(0))
+                {
+                    print("newspaper button pressed");
+                    newspaper.SetActive(true);
+                    GameObject buttonObj = newspaperButton.gameObject;
+                    buttonObj.SetActive(true);
                 }
                 return;
             }
