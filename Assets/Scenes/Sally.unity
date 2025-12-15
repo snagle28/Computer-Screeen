@@ -8881,9 +8881,9 @@ MonoBehaviour:
   text1: {fileID: 1947794606}
   text2: {fileID: 1649901918}
   text3: {fileID: 530292641}
-  image1: {fileID: 0}
-  image2: {fileID: 0}
-  image3: {fileID: 0}
+  image1: {fileID: 2018552884}
+  image2: {fileID: 1237603724}
+  image3: {fileID: 1967501811}
   isSelected: 0
   finalSwapDone: 0
   glitchOverlay1: {fileID: 0}
@@ -19434,8 +19434,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 10016451}
   m_HandleRect: {fileID: 10016449}
   m_Direction: 2
-  m_Value: 0.9777095
-  m_Size: 0.31521812
+  m_Value: -0.0008614585
+  m_Size: 0.31348103
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -27102,9 +27102,9 @@ MonoBehaviour:
   text1: {fileID: 1947794606}
   text2: {fileID: 1649901918}
   text3: {fileID: 530292641}
-  image1: {fileID: 0}
-  image2: {fileID: 0}
-  image3: {fileID: 0}
+  image1: {fileID: 2018552884}
+  image2: {fileID: 1237603724}
+  image3: {fileID: 1967501811}
   isSelected: 0
   finalSwapDone: 0
   glitchOverlay1: {fileID: 0}
@@ -31583,7 +31583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 28.83973}
+  m_AnchoredPosition: {x: 0, y: 1294.9236}
   m_SizeDelta: {x: 0, y: 1889.374}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1904091632
