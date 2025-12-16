@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: screen
-  m_Shader: {fileID: -6465566751694194690, guid: 98b304c0449b10e4199d8717835c1fe5, type: 3}
+  m_Name: slight_mat
+  m_Shader: {fileID: -6465566751694194690, guid: 9db9f75c9fc31724dbf5af42d59d1b25, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -116,7 +116,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FlickerScaleX: 0.08
+    - _FlickerScaleX: 50
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -141,7 +141,7 @@ Material:
     - _WorkflowMode: 0
     - _ZWrite: 1
     - _glitchON: 0
-    - _glitchStrength: 0.03
+    - _glitchStrength: 10
     - _noiseAmt: 50
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
