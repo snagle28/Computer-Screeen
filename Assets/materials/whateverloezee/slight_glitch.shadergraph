@@ -1581,7 +1581,7 @@
     "m_ObjectId": "59f430a974c24624812ebe2f38e7c021",
     "m_Title": "Flickering",
     "m_Position": {
-        "x": -967.0,
+        "x": -967.0000610351563,
         "y": 610.0
     }
 }
@@ -3669,7 +3669,7 @@
     "m_ObjectId": "e7cccf7a5a354235abfa082ae4a39226",
     "m_Title": "noise",
     "m_Position": {
-        "x": -783.0,
+        "x": -782.9999389648438,
         "y": 354.9999694824219
     }
 }
@@ -3757,17 +3757,17 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "edc0705fd91140039c88a7482712dd43",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "59f430a974c24624812ebe2f38e7c021"
     },
     "m_Name": "Property",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1612.000244140625,
-            "y": 1337.0001220703125,
-            "width": 138.999755859375,
-            "height": 33.9998779296875
+            "x": 1609.0,
+            "y": 1228.0,
+            "width": 139.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
