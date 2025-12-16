@@ -141,7 +141,7 @@ Material:
     - _WorkflowMode: 0
     - _ZWrite: 1
     - _glitchON: 0
-    - _glitchStrength: 10
+    - _glitchStrength: 0.03
     - _noiseAmt: 50
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

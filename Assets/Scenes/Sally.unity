@@ -19552,7 +19552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1295.834}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 1889.374}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1335896926
@@ -22423,7 +22423,9 @@ MonoBehaviour:
   glitchOff: {fileID: 249873559}
   glitchOnProperty: _glitchON
   flickerScaleXProperty: _FlickerScaleX
+  glitchStrengthProperty: _glitchStrength
   flickerScaleX: 0.08
+  glitchStrength: 0.16
 --- !u!1 &1514744114
 GameObject:
   m_ObjectHideFlags: 0
@@ -25893,8 +25895,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2081870150}
   m_HandleRect: {fileID: 2081870148}
   m_Direction: 2
-  m_Value: 0.00000023550527
-  m_Size: 0.31406084
+  m_Value: 1
+  m_Size: 0.31414637
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -26389,7 +26391,9 @@ MonoBehaviour:
   glitchOff: {fileID: 440157601}
   glitchOnProperty: _glitchON
   flickerScaleXProperty: _FlickerScaleX
+  glitchStrengthProperty: _glitchStrength
   flickerScaleX: 0.08
+  glitchStrength: 0.03
 --- !u!1 &1847285677
 GameObject:
   m_ObjectHideFlags: 0
@@ -27341,6 +27345,7 @@ GameObject:
   - component: {fileID: 1914229250}
   - component: {fileID: 1914229248}
   - component: {fileID: 1914229249}
+  - component: {fileID: 1914229251}
   m_Layer: 6
   m_Name: Page0
   m_TagString: Untagged
@@ -27405,7 +27410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914229246}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 814a6972aa0f0784783040ce2dc1d5c6, type: 3}
   m_Name: 
@@ -27421,6 +27426,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914229246}
   m_CullTransparentMesh: 1
+--- !u!114 &1914229251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914229246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0da558e666ed63479832d29d21cc9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenMat: {fileID: 2100000, guid: 842091887595a514188700ad25dc700b, type: 2}
+  glitchButton: {fileID: 173496053}
+  glitchOff: {fileID: 173496053}
+  glitchOnProperty: _glitchON
+  flickerScaleXProperty: _FlickerScaleX
+  glitchStrengthProperty: _glitchStrength
+  flickerScaleX: 50
+  glitchStrength: 1
 --- !u!1 &1918082221
 GameObject:
   m_ObjectHideFlags: 0
@@ -29260,7 +29285,9 @@ MonoBehaviour:
   glitchOff: {fileID: 1150957904}
   glitchOnProperty: _glitchON
   flickerScaleXProperty: _FlickerScaleX
+  glitchStrengthProperty: _glitchStrength
   flickerScaleX: 0.08
+  glitchStrength: 0.25
 --- !u!1 &2069202912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1884985948623172784, guid: 7f493f1ab329aa0408b05571e541b526, type: 3}
@@ -29383,8 +29410,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1039816570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.00000016154229}
-  m_AnchorMax: {x: 1, y: 0.31406084}
+  m_AnchorMin: {x: 0, y: 0.6858536}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
