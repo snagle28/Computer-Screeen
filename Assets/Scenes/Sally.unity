@@ -1779,7 +1779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   page0: {fileID: 1914229246}
-  page1: {fileID: 431844985}
+  page1: {fileID: 64208990}
   animator: {fileID: 183427673}
   staticMaterial: {fileID: -876546973899608171, guid: e27fb39f2e299dd45a70a4d8b4a683b0, type: 3}
 --- !u!114 &173496053
