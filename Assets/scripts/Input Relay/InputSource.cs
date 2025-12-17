@@ -31,6 +31,7 @@ public class InputSource : MonoBehaviour
     
     public AudioSource audioSource;
     public AudioClip quacksound;
+    public AudioClip phoneSound;
 
     public AudioClip clickDownSound;
     public AudioClip clickUpSound;
@@ -38,6 +39,8 @@ public class InputSource : MonoBehaviour
     //vars relating to newspaper popup
     public GameObject newspaper;
     public Button newspaperButton;
+
+    public GameObject phoneButton;
     
     
     void Start()
@@ -144,6 +147,15 @@ public class InputSource : MonoBehaviour
                     GameObject buttonObj = newspaperButton.gameObject;
                     buttonObj.SetActive(true);
                 }
+                else if ((hitResult.collider.gameObject.tag == "button") && Input.GetMouseButtonUp(0))
+                {
+                    print("clicked on phone");
+                    if (audioSource.isPlaying == false)
+                    {
+                        audioSource.PlayOneShot(phoneSound);
+                    }
+                }
+
                 return;
             }
         }

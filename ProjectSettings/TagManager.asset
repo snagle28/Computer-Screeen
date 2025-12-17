@@ -6,6 +6,7 @@ TagManager:
   tags:
   - duck
   - paper
+  - button
   layers:
   - Default
   - TransparentFX
