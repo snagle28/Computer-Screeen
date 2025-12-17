@@ -41,6 +41,7 @@ public class InputSource : MonoBehaviour
     public Button newspaperButton;
 
     public GameObject phoneButton;
+    public AudioClip crumple;
     
     
     void Start()
@@ -75,6 +76,7 @@ public class InputSource : MonoBehaviour
         /*
          * 
          */
+        
 
         Ray mouseRay = Camera.main.ScreenPointToRay(mousePos);
         RaycastHit hitResult;
@@ -142,6 +144,8 @@ public class InputSource : MonoBehaviour
                 }
                 else if ((hitResult.collider.gameObject.tag == "paper") && Input.GetMouseButtonUp(0))
                 {
+                    audioSource.PlayOneShot(crumple);
+                    phoneButton.SetActive(false);
                     print("newspaper button pressed");
                     newspaper.SetActive(true);
                     GameObject buttonObj = newspaperButton.gameObject;
